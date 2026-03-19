@@ -151,9 +151,18 @@ class CU_Updater
             return null;
         }
 
+        $zip_url = $body['zipball_url'];
+
+        foreach ($body['assets'] ?? [] as $asset) {
+            if (str_ends_with($asset['name'] ?? '', '.zip')) {
+                $zip_url = $asset['browser_download_url'];
+                break;
+            }
+        }
+
         $data = [
             'version' => ltrim($body['tag_name'], 'v'),
-            'zip_url' => $body['zipball_url'],
+            'zip_url' => $zip_url,
             'body'    => $body['body'] ?? '',
         ];
 

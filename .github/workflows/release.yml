@@ -1,0 +1,25 @@
+name: Build Release
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build plugin zip
+        run: |
+          mkdir cu-wp-plugin
+          cp -r assets includes cage-undefined.php cu-wp-plugin/
+          zip -r cu-wp-plugin.zip cu-wp-plugin/
+
+      - name: Upload to release
+        run: gh release upload "${{ github.event.release.tag_name }}" cu-wp-plugin.zip --clobber
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
