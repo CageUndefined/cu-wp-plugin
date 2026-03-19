@@ -1,0 +1,202 @@
+/**
+ * CU Login Page Theme
+ *
+ * Overrides wp-login.php styles with CU branding.
+ */
+
+/* ==========================================================================
+   Page Background
+   ========================================================================== */
+
+body.login {
+    background: #1a181d;
+    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Subtle accent glow at bottom */
+body.login::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    background: radial-gradient(
+        ellipse 80% 100% at 50% 100%,
+        rgba(117, 66, 254, 0.2) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ==========================================================================
+   Logo
+   ========================================================================== */
+
+.login h1 a {
+    /* CU mark: 3 bars + teal crossbar */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1080 1080' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fffdee'%3E%3Crect x='505.28' y='186.29' width='54.11' height='786.33' rx='10.83' ry='10.83'/%3E%3Crect x='253.42' y='286.61' width='54.11' height='585.69' rx='10.83' ry='10.83'/%3E%3Crect x='757.14' y='286.61' width='54.11' height='585.69' rx='10.83' ry='10.83'/%3E%3C/g%3E%3Crect fill='%23198e7b' x='54.83' y='546.9' width='955.01' height='65.11'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+}
+
+/* ==========================================================================
+   Login Form
+   ========================================================================== */
+
+.login form {
+    background: #242129;
+    border: 1px solid #2e2b33;
+    border-radius: 0;
+    box-shadow: none;
+    /* Hexagonal cut corners */
+    clip-path: polygon(
+        1rem 0,
+        calc(100% - 1rem) 0,
+        100% 1rem,
+        100% calc(100% - 1rem),
+        calc(100% - 1rem) 100%,
+        1rem 100%,
+        0 calc(100% - 1rem),
+        0 1rem
+    );
+    padding: 26px 24px 34px;
+}
+
+.login form .input,
+.login form input[type="text"],
+.login form input[type="password"],
+.login input[type="text"],
+.login input[type="password"] {
+    background: #1a181d;
+    border: 1px solid #3a3740;
+    color: #fffdee;
+    border-radius: 2px;
+    box-shadow: none;
+}
+
+.login form .input:focus,
+.login form input[type="text"]:focus,
+.login form input[type="password"]:focus {
+    border-color: #7542fe;
+    box-shadow: 0 0 0 1px #7542fe;
+    outline: none;
+}
+
+.login label {
+    color: #c8c6cc;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   Submit Button
+   ========================================================================== */
+
+.login .button-primary {
+    background: #7542fe !important;
+    border-color: #5a2ed4 !important;
+    color: #fff !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+    border-radius: 2px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    padding: 4px 20px;
+    height: auto;
+    line-height: 1.8;
+}
+
+.login .button-primary:hover,
+.login .button-primary:focus {
+    background: #5a2ed4 !important;
+    border-color: #4a24b0 !important;
+}
+
+.login .button-primary:active {
+    background: #4a24b0 !important;
+}
+
+/* ==========================================================================
+   Messages & Errors
+   ========================================================================== */
+
+.login .message,
+.login .success {
+    border-left-color: #198e7b;
+    background: rgba(25, 142, 123, 0.1);
+    color: #c8c6cc;
+}
+
+.login #login_error {
+    border-left-color: #ff6112;
+    background: rgba(255, 97, 18, 0.1);
+    color: #c8c6cc;
+}
+
+.login #login_error a {
+    color: #9d7aff;
+}
+
+/* ==========================================================================
+   Navigation Links
+   ========================================================================== */
+
+.login #nav,
+.login #backtoblog {
+    color: #b3b1b8;
+}
+
+.login #nav a,
+.login #backtoblog a {
+    color: #9d7aff;
+}
+
+.login #nav a:hover,
+.login #backtoblog a:hover {
+    color: #fffdee;
+}
+
+/* ==========================================================================
+   Privacy Policy Link
+   ========================================================================== */
+
+.login .privacy-policy-page-link a {
+    color: #b3b1b8;
+}
+
+.login .privacy-policy-page-link a:hover {
+    color: #fffdee;
+}
+
+/* ==========================================================================
+   "Remember Me" Checkbox
+   ========================================================================== */
+
+.login input[type="checkbox"]:checked::before {
+    color: #7542fe;
+}
+
+.login input[type="checkbox"]:focus {
+    border-color: #7542fe;
+    box-shadow: 0 0 0 1px #7542fe;
+}
+
+/* ==========================================================================
+   Language Switcher
+   ========================================================================== */
+
+.language-switcher {
+    background: #242129 !important;
+    border-color: #2e2b33 !important;
+}
+
+.language-switcher select {
+    background: #1a181d;
+    color: #c8c6cc;
+    border-color: #3a3740;
+}
