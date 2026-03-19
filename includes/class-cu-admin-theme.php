@@ -1,4 +1,8 @@
 <?php
+if (! defined('ABSPATH')) {
+    exit;
+}
+
 /**
  * CU admin theme: brand colors, logo, footer, and login page.
  */
@@ -35,9 +39,9 @@ class CU_Admin_Theme
 
         wp_enqueue_style(
             'cu-admin-theme',
-            CU_BRANDING_URL . 'assets/css/admin-theme.css',
+            CU_URL . 'assets/css/admin-theme.css',
             ['cu-google-fonts'],
-            CU_BRANDING_VERSION
+            CU_VERSION
         );
     }
 
@@ -52,9 +56,9 @@ class CU_Admin_Theme
 
         wp_enqueue_style(
             'cu-login-theme',
-            CU_BRANDING_URL . 'assets/css/login-page.css',
+            CU_URL . 'assets/css/login-page.css',
             ['cu-google-fonts'],
-            CU_BRANDING_VERSION
+            CU_VERSION
         );
     }
 

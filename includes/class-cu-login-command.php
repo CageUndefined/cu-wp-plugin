@@ -1,4 +1,8 @@
 <?php
+if (! defined('ABSPATH')) {
+    exit;
+}
+
 /**
  * WP-CLI commands for magic login links.
  *
@@ -53,8 +57,8 @@ class CU_Login_Command
     /**
      * Installs the magic login companion plugin.
      *
-     * This is a no-op — the CU Branding plugin provides magic login
-     * natively. Kept for backward compatibility with panel269.
+     * This is a no-op — the Cage Undefined plugin provides magic login
+     * natively. Kept for backward compatibility with Panel269.
      *
      * ## OPTIONS
      *
@@ -69,6 +73,6 @@ class CU_Login_Command
      */
     public function install($args, $assoc_args)
     {
-        WP_CLI::success('Magic login is provided by the CU Branding plugin (already active).');
+        WP_CLI::success('Magic login is provided by the Cage Undefined plugin (already active).');
     }
 }
