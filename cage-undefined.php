@@ -30,11 +30,14 @@ define('CU_URL', plugin_dir_url(__FILE__));
 
 require_once CU_PATH . 'includes/class-cu-login.php';
 require_once CU_PATH . 'includes/class-cu-admin-theme.php';
+require_once CU_PATH . 'includes/class-cu-updater.php';
 
 add_action('plugins_loaded', function () {
     CU_Login::init();
     CU_Admin_Theme::init();
 });
+
+CU_Updater::init(__FILE__);
 
 // Register WP-CLI commands.
 if (defined('WP_CLI') && WP_CLI) {
