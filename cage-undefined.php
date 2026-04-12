@@ -17,7 +17,7 @@ if (! defined('ABSPATH')) {
 }
 
 // Deactivate the plugin outside Panel269.
-if (! file_exists('/usr/local/bin/269')) {
+if (! file_exists('/usr/local/bin/panel269')) {
     add_action('admin_init', function () {
         deactivate_plugins(plugin_basename(__FILE__));
     });
