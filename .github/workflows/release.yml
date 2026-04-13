@@ -15,11 +15,11 @@ jobs:
 
       - name: Build plugin zip
         run: |
-          mkdir cu-wp-plugin
-          cp -r assets includes cage-undefined.php cu-wp-plugin/
-          zip -r cu-wp-plugin.zip cu-wp-plugin/
+          mkdir panel269-wp-plugin
+          cp -r assets includes cage-undefined.php panel269-wp-plugin/
+          zip -r panel269-wp-plugin.zip panel269-wp-plugin/
 
       - name: Upload to release
-        run: gh release upload "${{ github.event.release.tag_name }}" cu-wp-plugin.zip --clobber
+        run: gh release upload "${{ github.event.release.tag_name }}" panel269-wp-plugin.zip --clobber
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

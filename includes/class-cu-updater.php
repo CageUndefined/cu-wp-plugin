@@ -6,7 +6,7 @@ if (! defined('ABSPATH')) {
 
 class CU_Updater
 {
-    private const GITHUB_REPO = 'CageUndefined/cu-wp-plugin';
+    private const GITHUB_REPO = 'CageUndefined/panel269-wp-plugin';
     private const CACHE_KEY = 'cu_github_update';
     private const CACHE_TTL = 6 * HOUR_IN_SECONDS;
 
