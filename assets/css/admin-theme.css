@@ -1,16 +1,8 @@
 /**
- * CU Admin Theme
+ * CU Admin Theme — supplementary styles
  *
- * Brand colors:
- *   Primary/Success: #198e7b (teal)
- *   Accent/Info:     #7542fe (purple)
- *   Danger:          #ff6112 (orange)
- *   Warning:         #ffcc00 (yellow)
- *
- * Surfaces:
- *   Dark bg:   #1a181d
- *   Dark mid:  #242129
- *   Light:     #fffdee
+ * Color overrides are handled by the registered color scheme (color-scheme.css).
+ * This file covers fonts, layout tweaks, and notice colors not in the scheme.
  */
 
 /* ==========================================================================
@@ -22,154 +14,9 @@ body {
 }
 
 /* ==========================================================================
-   Admin Menu (Sidebar)
+   Page Titles
    ========================================================================== */
 
-#adminmenuback,
-#adminmenuwrap,
-#adminmenu {
-    background: #1a181d;
-}
-
-#adminmenu a {
-    color: #c8c6cc;
-}
-
-#adminmenu a:hover {
-    color: #fffdee;
-}
-
-#adminmenu div.wp-menu-image::before {
-    color: #9d7aff;
-}
-
-#adminmenu a:hover div.wp-menu-image::before {
-    color: #fffdee;
-}
-
-/* Current / active menu item */
-#adminmenu li.current a.menu-top,
-#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
-#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu:hover,
-#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu:focus {
-    background: #7542fe;
-    color: #fff;
-}
-
-#adminmenu li.current a.menu-top div.wp-menu-image::before,
-#adminmenu li.wp-has-current-submenu div.wp-menu-image::before {
-    color: #fff;
-}
-
-/* Hover state */
-#adminmenu li.menu-top:hover,
-#adminmenu li.opensub > a.menu-top,
-#adminmenu li > a.menu-top:focus {
-    background: #242129;
-    color: #fffdee;
-}
-
-/* Submenu */
-#adminmenu .wp-submenu,
-#adminmenu .wp-has-current-submenu .wp-submenu,
-#adminmenu .wp-has-current-submenu.opensub .wp-submenu {
-    background: #242129;
-}
-
-#adminmenu .wp-submenu a {
-    color: #b3b1b8;
-}
-
-#adminmenu .wp-submenu a:hover,
-#adminmenu .wp-submenu a:focus {
-    color: #fffdee;
-}
-
-#adminmenu .wp-submenu li.current a {
-    color: #fffdee;
-}
-
-/* Separator */
-#adminmenu li.wp-menu-separator {
-    background: #2e2b33;
-}
-
-/* Collapse button */
-#collapse-menu {
-    color: #b3b1b8;
-}
-
-#collapse-menu:hover {
-    color: #fffdee;
-}
-
-#collapse-button div::after {
-    color: #9d7aff;
-}
-
-/* Update / notification badges */
-#adminmenu .update-plugins .update-count,
-#adminmenu .awaiting-mod .pending-count,
-#adminmenu .menu-counter .count {
-    background: #198e7b;
-    color: #fff;
-}
-
-/* ==========================================================================
-   Admin Bar (Top Bar)
-   ========================================================================== */
-
-#wpadminbar {
-    background: #1a181d;
-}
-
-#wpadminbar .ab-item,
-#wpadminbar a.ab-item,
-#wpadminbar > #wp-toolbar span.ab-label,
-#wpadminbar > #wp-toolbar span.noticon {
-    color: #c8c6cc;
-}
-
-#wpadminbar .ab-item:hover,
-#wpadminbar a.ab-item:hover,
-#wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item,
-#wpadminbar:not(.mobile) .ab-top-menu > li > .ab-item:focus {
-    background: #242129;
-    color: #fffdee;
-}
-
-#wpadminbar .quicklinks .menupop ul {
-    background: #242129;
-}
-
-#wpadminbar .quicklinks .menupop ul li a,
-#wpadminbar .quicklinks .menupop ul li a strong {
-    color: #c8c6cc;
-}
-
-#wpadminbar .quicklinks .menupop ul li a:hover {
-    color: #fffdee;
-    background: #1a181d;
-}
-
-#wpadminbar #adminbarsearch::before {
-    color: #9d7aff;
-}
-
-/* ==========================================================================
-   Content Area
-   ========================================================================== */
-
-/* Links */
-.wrap a {
-    color: #7542fe;
-}
-
-.wrap a:hover {
-    color: #9d7aff;
-}
-
-/* Page titles */
 .wrap h1,
 .wrap h2 {
     font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -177,56 +24,11 @@ body {
 }
 
 /* ==========================================================================
-   Buttons
+   Menu Separator
    ========================================================================== */
 
-.wp-core-ui .button-primary {
-    background: #7542fe;
-    border-color: #5a2ed4;
-    color: #fff;
-    text-shadow: none;
-    box-shadow: none;
-}
-
-.wp-core-ui .button-primary:hover,
-.wp-core-ui .button-primary:focus {
-    background: #5a2ed4;
-    border-color: #4a24b0;
-    color: #fff;
-    box-shadow: none;
-}
-
-.wp-core-ui .button-primary:active {
-    background: #4a24b0;
-    border-color: #3d1e90;
-}
-
-.wp-core-ui .button-primary.focus,
-.wp-core-ui .button-primary:focus {
-    box-shadow: 0 0 0 1px #fff, 0 0 0 3px #7542fe;
-}
-
-/* ==========================================================================
-   Focus States
-   ========================================================================== */
-
-input[type="checkbox"]:checked::before {
-    color: #7542fe;
-}
-
-input[type="radio"]:checked::before {
-    background: #7542fe;
-}
-
-.wp-core-ui select:focus,
-.wp-core-ui input[type="text"]:focus,
-.wp-core-ui input[type="password"]:focus,
-.wp-core-ui input[type="email"]:focus,
-.wp-core-ui input[type="url"]:focus,
-.wp-core-ui input[type="search"]:focus,
-.wp-core-ui textarea:focus {
-    border-color: #7542fe;
-    box-shadow: 0 0 0 1px #7542fe;
+#adminmenu li.wp-menu-separator {
+    background: #2e2b33;
 }
 
 /* ==========================================================================
@@ -242,7 +44,7 @@ input[type="radio"]:checked::before {
 }
 
 /* ==========================================================================
-   Notices
+   Notices — custom danger/warning colors
    ========================================================================== */
 
 .notice-success,

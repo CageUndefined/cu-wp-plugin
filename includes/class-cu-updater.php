@@ -83,7 +83,7 @@ class CU_Updater
             'name'          => 'Cage Undefined',
             'slug'          => dirname($this->plugin_basename),
             'version'       => $release['version'],
-            'author'        => '<a href="https://cageundefined.com">Cage Undefined</a>',
+            'author'        => '<a href="https://cageundefined.org">Cage Undefined</a>',
             'homepage'      => 'https://github.com/' . self::GITHUB_REPO,
             'download_link' => $release['zip_url'],
             'sections'      => [

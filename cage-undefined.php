@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: Cage Undefined
- * Plugin URI: https://cageundefined.com
+ * Plugin URI: https://cageundefined.org
  * Description: CU Panel269 integration for WordPress.
  * Version: 1.0.0
  * Author: Cage Undefined
- * Author URI: https://cageundefined.com
+ * Author URI: https://cageundefined.org
  * License: GPL-2.0-or-later
  * Text Domain: cage-undefined
  * Requires at least: 5.6
@@ -14,14 +14,6 @@
 
 if (! defined('ABSPATH')) {
     exit;
-}
-
-// Deactivate the plugin outside Panel269.
-if (! file_exists('/usr/local/bin/panel269')) {
-    add_action('admin_init', function () {
-        deactivate_plugins(plugin_basename(__FILE__));
-    });
-    return;
 }
 
 define('CU_VERSION', '1.0.0');

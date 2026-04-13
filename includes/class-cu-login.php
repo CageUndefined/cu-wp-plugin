@@ -18,7 +18,7 @@ class CU_Login
     const TOKEN_LENGTH = 32;
 
     /** Query parameter used for the magic login URL. */
-    const QUERY_VAR = 'cu-magic-login';
+    const QUERY_VAR = 'panel269-login';
 
     public static function init(): void
     {
